@@ -5,10 +5,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-      <h1>Weather App</h1>
       <Weahter />
       <footer>
-      this project was coded by <a href="https://github.com/iamfatimarahimi">Fatima Raimi</a> And It's <a href="https://github.com/iamfatimarahimi/weatherapp">open-sourced on Github</a>
+      this project was coded by <a href="https://github.com/iamfatimarahimi">Fatima Raimi</a> And It's <a href="https://github.com/iamfatimarahimi/weatherapp"
+      target="_blank">open-sourced on Github</a>
       </footer>
       </div>
     </div>
