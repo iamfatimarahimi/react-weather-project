@@ -1,6 +1,7 @@
 import React ,{useState} from "react";
 // import {InfinitySpin} from 'react-loader-spinner'
 import './weather.css'
+import FormatteDate from './formatteDate'
 import axios from "axios";
 
 export default function Weather(props){ 
@@ -16,7 +17,7 @@ export default function Weather(props){
             iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
              wind: response.data.wind.speed,
             city : response.data.name,
-            date:" wednesday 07:00",
+            date:new Date(response.data.dt *1000),
         })
 
     }
@@ -37,7 +38,7 @@ export default function Weather(props){
             </form>
             <h1>{weatherData.city}</h1>
             <ul>
-                <li>{weatherData.date}</li>
+                <li><FormatteDate date={weatherData.date}/></li>
                 <li className="text-capitalize">desceription :{weatherData.desceription}</li>
             </ul>
             <div className="row">
