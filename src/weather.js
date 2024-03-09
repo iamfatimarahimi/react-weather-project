@@ -12,8 +12,8 @@ export default function Weather(props){
             ready : true,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
-            desceription: response.data.weather[0].desceription,
-            iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+            description: response.data.weather[0].description,
+            iconUrl: response.data.weather[0].icon,
              wind: response.data.wind.speed,
             city : response.data.name,
             date:new Date(response.data.dt *1000),
@@ -47,7 +47,7 @@ export default function Weather(props){
                 </div>
                 </div>
             </form>
-            <WeatherInfo data ="weatherData"/>
+            <WeatherInfo data ={weatherData}/>
             
         </div>
       )
