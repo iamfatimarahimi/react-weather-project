@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import './weather.css'
-import WeatherInfo from './weatherInfo'
+import WeatherInfo from './WeatherInformation'
 import axios from "axios";
 
 export default function Weather(props){ 
